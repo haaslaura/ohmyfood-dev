@@ -4,25 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Ohmyfood | Réservez le menu qui vous convient</title>
+	<link rel="icon" href="/assets/images/logo/ohmyfood-favicon.ico">
     <link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/3d631d5da7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<header>
-		<h1>Test</h1>
-		<p>Test</p>
+		<i class="fa-solid fa-arrow-left"></i>
+		<img src="assets/images/logo/ohmyfood.svg" class="logo" alt="Logo Ohmyfood">
 	</header>
 	
 	<main>
-		<section>
+		<!-- Geolocation, discovery -->
+		<section class="geolocation">
+			<!-- Geolocation-->
+			<img src="/assets/images/icons/icon_pin.svg" class="geolocation__icon" alt="Icone de localisation">
+			<form>
+				<input
+					type="search"
+					name="place"
+					class="geolocation__input"
+					placeholder="Entrez votre recherche"
+					value="Paris, Belleville">
+			</form>
 		</section>
+
+		<section class="discovery">
+			<!-- Discovery-->
+			<h2>Réservez le menu qui vous convient</h2>
+			<!-- garder le style h1 pour la typo Shrikhand,
+				titre des pages restaurants.
+				Mais voir si possible de passer un h1 dans la page d'accueil ? -->
+			<p class="discovery__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+			<p class="btn"><a href="#restaurants">Explorer nos restaurants</a></p>
+		</section>
+
+		<!-- Explanation -->
+		<section class="explain">
+			<h2>Fonctionnement</h2>
+			<div class="explain__step">
+				<p class="step">1</p>
+				<img src="/assets/images/icons/icon_mobile.svg" alt="Icone de téléphone mobile">
+				<p class="step__text">Choisissez un restaurant</p>
+			</div>
+			<div class="explain__step">
+				<p class="step">2</p>
+				<img src="/assets/images/icons/icon_list.svg" alt="Icone de liste">
+				<p class="step__text">Composez votre menu</p>
+			</div>
+			<div class="explain__step">
+				<p class="step">3</p>
+				<img src="/assets/images/icons/icon_store.svg" alt="Icone de magasin">
+				<p class="step__text">Dégustez au restaurant</p>
+			</div>
+		</section>
+
+		<!-- List of restaurants -->
+		<section class="restaurants" id="restaurants">
+			<h2>Restaurants</h2>
+			<div class="restaurants__cards">
+				<a href="/restaurants/la-palette-du-gout.html">
+					<article class="restaurant__card">
+						<img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="card_img" alt="Image de plat au restaurant">
+						<div class="tag__new">Nouveau</div>
+						<div class="restaurant__text">
+							<div>
+								<h3>La plalette du goût</h3>
+								<p>Ménilmontant</p>
+							</div>
+							<img src="assets/images/icons/heart_icon.svg" alt="Icone coeur">
+						</div>
+					</article>
+				</a>
+				<!-- À FAIRE : réaliser les 3 autres cards -->
+
+			</div>
+		</section>
+
 	</main>
 	
 	<footer>
+		<img src="" alt="Logo Ohmyfood blanc">
+		<p>ohmyfood</p>
+		<nav>
+			<ul>
+				<li><img src="/assets/images/icons/icon_tableware.svg" alt="Icone de couverts"> Proposer un restaurant</li>
+				<li><img src="/assets/images/icons/icon_handsshake.svg" alt="Icone de mains serrées"> Devenir partenaire</li>
+				<li>Mentions légales</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+
 	</footer>
 
 </body>
