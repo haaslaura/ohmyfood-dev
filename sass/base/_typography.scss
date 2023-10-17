@@ -1,0 +1,29 @@
+@import "utils/variables";
+
+h1 {
+    font-family: $title-font;
+    font-size: 1.75rem; 
+    line-height: 2.55rem;
+}
+
+h2, h3, h4, h5, p, ul, ol {
+    font-family: $text-font;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.76rem;
+}
+
+h3 {
+    font-size: 1.13rem;
+    font-weight: 700;
+    line-height: 1.32rem;
+}
+
+p, ul, ol {
+    font-size: 0.94rem;
+    font-weight: 300;
+    line-height: 1.1rem;
+}
