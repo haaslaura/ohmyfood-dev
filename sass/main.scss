@@ -1,5 +1,89 @@
-@import "./utils/variables"
+@import "./base/normalize";
+@import "./base/typography";
 
-h1 {
-    color: $primary-color;
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+
+/*****************/
+/**** GLOBAL *****/
+/*****************/
+
+
+body {
+    margin: 0px;
 }
+
+ 
+.btn {
+    display: block;
+    width: 260px;
+    text-align: center;
+    border-radius: 2em;
+    padding: 18px 5px 18px 5px;
+    @include gradient(down, $list1);
+    font-family: $text-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .25);
+    a {
+    color: white;
+    text-decoration:none;
+}
+}
+  
+  /*****************/
+  /****** BEM ******/
+  /*****************/
+    
+  .geolocation {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #EAEAEA;
+    .geolocation__title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18,75px;
+    }
+    .geolocation__form {
+      .geolocation__input {
+        outline: none;
+        border: none;
+        background: none;
+        font-family: $text-font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18,75px;
+      }
+    }
+  }
+  
+  .discovery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $dark-background;
+    padding: 60px 5% 60px 5%;
+    text-align: center;
+    h3 {
+      font-size: 18px;
+      font-weight: 300;
+    }
+    &__btn--accueil {
+      margin-top: 40px;
+    }
+  }
+  
+  .explain {
+    .explain__step {
+      background-color: #F6F6F6;
+    }
+  }
