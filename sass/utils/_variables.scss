@@ -1,6 +1,15 @@
-/* COLORS */
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiaire: #99E2D0;
-$text-color: #000000;
-$title-color: #101010;
+// Global variables for the whole site
+
+/** Color **/
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertirary-color: #99E2D0;
+$dark-background: #F6F6F6;
+
+/** List gradient **/
+$list1: $primary-color, $secondary-color;
+
+/** Font familly **/
+$title-font: 'Shrikhand', serif;
+
+$text-font: 'Roboto', sans-serif;
