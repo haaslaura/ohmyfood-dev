@@ -400,6 +400,20 @@ header .icon__arrow-left {
 /** List gradient **/
 /** Font familly **/
 /*****************/
+/***** GLOBAL ****/
+/*****************/
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 50px 20px;
+}
+
+.section--lightgrey {
+  background-color: #F6F6F6;
+}
+
+/*****************/
 /****** BEM ******/
 /*****************/
 .geolocation {
@@ -433,23 +447,53 @@ header .icon__arrow-left {
 }
 
 .discovery {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: #F6F6F6;
-  padding: 60px 5% 60px 5%;
   text-align: center;
 }
 .discovery h3 {
   font-size: 18px;
   font-weight: 300;
+  line-height: 21.09px;
 }
 .discovery__btn--accueil {
   margin-top: 40px;
 }
 
 .explain .explain__step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
   background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 73px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.explain .explain__step .step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-weight: 500;
+  font-size: 0.89rem;
+  margin-right: 20px;
+  margin-left: -10px;
+}
+.explain .explain__step img {
+  margin-right: 20px;
+}
+.explain .explain__step .explain__text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18.75px;
 }
 
 /*# sourceMappingURL=style.css.map */
