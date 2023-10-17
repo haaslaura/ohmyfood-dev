@@ -342,32 +342,17 @@ p, ul, ol {
   line-height: 1.1rem;
 }
 
-header {
-  z-index: 2;
-  background-color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  position: sticky;
-  top: 0;
-  padding: 4px 0px 4px 0px;
-}
-
 /** Color **/
 /** List gradient **/
 /** Font familly **/
-/*****************/
-/**** GLOBAL *****/
-/*****************/
-body {
-  margin: 0px;
-}
-
+/** Main button **/
 .btn {
   display: block;
   width: 260px;
   text-align: center;
   border-radius: 2em;
   padding: 18px 5px 18px 5px;
-  background: -webkit-linear-gradient(down, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(bottom, #9356DC, #FF79DA);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -377,6 +362,55 @@ body {
 .btn a {
   color: white;
   text-decoration: none;
+}
+
+.header__home {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  align-items: center;
+  height: 63px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.header__home .icon__arrow-left {
+  visibility: hidden;
+  margin-left: 1rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  align-items: center;
+  height: 63px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header .icon__arrow-left {
+  visibility: visible;
+  margin-left: 1rem;
+}
+
+/** Color **/
+/** List gradient **/
+/** Font familly **/
+/*****************/
+/***** GLOBAL ****/
+/*****************/
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 50px 20px;
+}
+
+.section--lightgrey {
+  background-color: #F6F6F6;
 }
 
 /*****************/
@@ -391,39 +425,75 @@ body {
   flex-wrap: nowrap;
   background-color: #EAEAEA;
 }
-.geolocation .geolocation__title {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18, 75px;
+.geolocation .geolocation__icon {
+  margin-right: 16px;
 }
-.geolocation .geolocation__form .geolocation__input {
+.geolocation .geolocation__title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18.75px;
+}
+.geolocation .geolocation__title--input {
+  font-family: "Roboto", sans-serif;
   outline: none;
   border: none;
+  border-bottom: 1px solid lightgray;
   background: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18, 75px;
+  min-width: 100px;
+  width: 100px;
+}
+.geolocation .geolocation__title--input:focus {
+  border-bottom: 1px solid black;
 }
 
 .discovery {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: #F6F6F6;
-  padding: 60px 5% 60px 5%;
   text-align: center;
 }
 .discovery h3 {
   font-size: 18px;
   font-weight: 300;
+  line-height: 21.09px;
 }
 .discovery__btn--accueil {
   margin-top: 40px;
 }
 
 .explain .explain__step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
   background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 73px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.explain .explain__step .step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-weight: 500;
+  font-size: 0.89rem;
+  margin-right: 20px;
+  margin-left: -10px;
+}
+.explain .explain__step img {
+  margin-right: 20px;
+}
+.explain .explain__step .explain__text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18.75px;
 }
 
 /*# sourceMappingURL=style.css.map */

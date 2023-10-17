@@ -1,6 +1,8 @@
 @import "./base/normalize";
 @import "./base/typography";
 
+@import "./components/buttons";
+
 @import "./layout/header";
 @import "./layout/footer";
 
@@ -9,81 +11,116 @@
 
 
 /*****************/
-/**** GLOBAL *****/
+/***** GLOBAL ****/
 /*****************/
-
-
-body {
-    margin: 0px;
+    
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 50px 20px;
 }
 
- 
-.btn {
-    display: block;
-    width: 260px;
-    text-align: center;
-    border-radius: 2em;
-    padding: 18px 5px 18px 5px;
-    @include gradient(down, $list1);
-    font-family: $text-font;
-    font-size: 16px;
+.section--lightgrey {
+  background-color: $grey-background;
+}
+
+/*****************/
+/****** BEM ******/
+/*****************/
+    
+.geolocation {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #EAEAEA;
+
+  .geolocation__icon {
+    margin-right: 16px;
+  }
+
+  .geolocation__title {
+    font-size: 1rem;
     font-weight: 500;
     line-height: 18.75px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, .25);
-    a {
-    color: white;
-    text-decoration:none;
+  }
+
+  .geolocation__title--input {
+    font-family: $text-font;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background: none;
+    min-width: 100px;
+    width: 100px;
+  }
+  .geolocation__title--input:focus {
+    border-bottom: 1px solid black;
+  }
 }
+
+.discovery {
+  align-items: center;
+  text-align: center;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+  }
+
+  &__btn--accueil {
+    margin-top: 40px;
+  }
 }
   
-  /*****************/
-  /****** BEM ******/
-  /*****************/
-    
-  .geolocation {
-    z-index: 1;
+.explain {
+  .explain__step {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: nowrap;
-    background-color: #EAEAEA;
-    .geolocation__title {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18,75px;
-    }
-    .geolocation__form {
-      .geolocation__input {
-        outline: none;
-        border: none;
-        background: none;
-        font-family: $text-font;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 18,75px;
-      }
-    }
-  }
-  
-  .discovery {
-    display: flex;
-    flex-direction: column;
+    justify-content: start;
     align-items: center;
-    background-color: $dark-background;
-    padding: 60px 5% 60px 5%;
-    text-align: center;
-    h3 {
-      font-size: 18px;
-      font-weight: 300;
+    background-color: #F6F6F6;
+    @include shadow-block;
+    border-radius: 20px;
+    height: 73px;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    .step {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $primary-color;
+      color: white;
+      font-weight: 500;
+      font-size: 0.89rem;
+      margin-right: 20px;
+      margin-left: -10px;
     }
-    &__btn--accueil {
-      margin-top: 40px;
+
+    img {
+      margin-right: 20px;
+    }
+    .explain__text {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 18.75px;
     }
   }
-  
-  .explain {
-    .explain__step {
-      background-color: #F6F6F6;
-    }
+}
+
+.restaurants {
+  .restaurants__cards {
+
   }
+
+}

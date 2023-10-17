@@ -13,63 +13,61 @@
 </head>
 
 <body>
-	<header>
-		<i class="fa-solid fa-arrow-left"></i>
-		<img src="assets/images/logo/ohmyfood.svg" class="logo" alt="Logo Ohmyfood">
+	<header class="header__home">
+		<img class="icon__arrow-left" src="assets/images/icons/icon_arrow-left.svg" alt="Icone de flèche pointant vers la gauche">
+		<img class="header__logo" src="assets/images/logo/ohmyfood.svg" alt="Logo Ohmyfood">
 	</header>
 	
 	<main>
 		<!-- Discovery -->
-		<section class="geolocation">
+		<div class="geolocation">
 			<!-- Geolocation-->
-			<img src="/assets/images/icons/icon_pin.svg" class="geolocation__icon" alt="Icone de localisation">
-			<p class="geolocation__title">Paris,</1>
+			<img class="geolocation__icon" src="./assets/images/icons/icon_pin.svg" alt="Icone de localisation">
+			<p class="geolocation__title">Paris,&nbsp;</p>
 			<!-- ** Test form ** -->
 			<form class="geolocation__form">
 				<input
                         type="search"
                         name="place"
-                        class="geolocation__input"
+                        class="geolocation__title geolocation__title--input"
                         placeholder="Indiquez un quartier"
-                        value="Belleville">
+                        value="Belleville"
+				>
 			</form>
-		</section>
+		</div>
 
-		<section class="discovery">
+		<section class="section section--lightgrey discovery">
 			<!-- Discovery-->
 			<h2>Réservez le menu qui vous convient</h2>
-			<!-- garder le style h1 pour la typo Shrikhand,
-				titre des pages restaurants.
-				Mais voir si possible de passer un h1 dans la page d'accueil ? -->
 			<h3 class="discovery__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
 			<p class="btn"><a href="#restaurants">Explorer nos restaurants</a></p>
 		</section>
 
 		<!-- Explanation -->
-		<section class="explain">
+		<section class="section explain">
 			<h2>Fonctionnement</h2>
 			<div class="explain__step">
 				<p class="step">1</p>
-				<img src="/assets/images/icons/icon_mobile.svg" alt="Icone de téléphone mobile">
-				<p class="step__text">Choisissez un restaurant</p>
+				<img src="./assets/images/icons/icon_mobile.svg" alt="Icone de téléphone mobile">
+				<p class="explain__text">Choisissez un restaurant</p>
 			</div>
 			<div class="explain__step">
 				<p class="step">2</p>
-				<img src="/assets/images/icons/icon_list.svg" alt="Icone de liste">
-				<p class="step__text">Composez votre menu</p>
+				<img src="./assets/images/icons/icon_list.svg" alt="Icone de liste">
+				<p class="explain__text">Composez votre menu</p>
 			</div>
 			<div class="explain__step">
 				<p class="step">3</p>
-				<img src="/assets/images/icons/icon_store.svg" alt="Icone de magasin">
-				<p class="step__text">Dégustez au restaurant</p>
+				<img src="./assets/images/icons/icon_store.svg" alt="Icone de magasin">
+				<p class="explain__text">Dégustez au restaurant</p>
 			</div>
 		</section>
 
 		<!-- List of restaurants -->
-		<section class="restaurants" id="restaurants">
+		<section class="section section--lightgrey restaurants" id="restaurants">
 			<h2>Restaurants</h2>
 			<div class="restaurants__cards">
-				<a href="/restaurants/la-palette-du-gout.html">
+				<a href="menus/la-palette-du-gout.html">
 					<article class="restaurant__card">
 						<img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="card_img" alt="Image de plat au restaurant">
 						<div class="tag__new">Nouveau</div>
