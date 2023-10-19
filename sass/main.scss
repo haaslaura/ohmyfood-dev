@@ -2,6 +2,7 @@
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/cards";
 
 @import "./layout/header";
 @import "./layout/footer";
@@ -23,6 +24,11 @@
 
 .section--lightgrey {
   background-color: $grey-background;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /*****************/
@@ -76,51 +82,44 @@
     margin-top: 40px;
   }
 }
-  
-.explain {
-  .explain__step {
+
+
+.explain__step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  background-color: #F6F6F6;
+  @include shadow-block;
+  border-radius: 20px;
+  height: 73px;
+  margin-top: 20px;
+  margin-left: 10px;
+
+  .step {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    background-color: #F6F6F6;
-    @include shadow-block;
-    border-radius: 20px;
-    height: 73px;
-    margin-top: 20px;
-    margin-left: 10px;
-
-    .step {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background-color: $primary-color;
-      color: white;
-      font-weight: 500;
-      font-size: 0.89rem;
-      margin-right: 20px;
-      margin-left: -10px;
-    }
-
-    img {
-      margin-right: 20px;
-    }
-    .explain__text {
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 18.75px;
-    }
-  }
-}
-
-.restaurants {
-  .restaurants__cards {
-
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    color: white;
+    font-weight: 500;
+    font-size: 0.89rem;
+    margin-right: 20px;
+    margin-left: -10px;
   }
 
+  img {
+    margin-right: 20px;
+  }
+
+  .explain__text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18.75px;
+  }
 }

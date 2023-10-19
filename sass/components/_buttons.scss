@@ -19,3 +19,45 @@
     text-decoration:none;
     }
 }
+
+.tag__new {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 29px;
+    border-radius: 2px;
+    background-color: $tertirary-color;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .15);
+    color: #008766;
+    font-family: $text-font;
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+
+.heart__icon {
+    width: 24px;
+    height: 24px;
+    background-color: $primary-color;
+    clip-path: polygon(
+        52% 21%,
+        63% 14%,
+        72% 10%,
+        84% 11%,
+        93% 17%,
+        98% 27%,
+        98% 39%,
+        95% 50%,
+        51% 100%,
+
+        5% 50%,
+        2% 39%,
+        2% 27%,
+        7% 17%,
+        16% 11%,
+        28% 10%,
+        37% 14%,
+        48% 21%
+    );
+}
