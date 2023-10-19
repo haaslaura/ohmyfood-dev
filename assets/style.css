@@ -440,8 +440,9 @@ p, ul, ol {
 }
 
 .header__home {
-  display: grid;
-  grid-template-columns: 3fr 1fr 3fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   height: 63px;
   background-color: white;
@@ -449,15 +450,12 @@ p, ul, ol {
   position: sticky;
   top: 0;
   z-index: 2;
-}
-.header__home .icon__arrow-left {
-  visibility: hidden;
-  margin-left: 1rem;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 3fr 1fr 3fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   height: 63px;
   background-color: white;
@@ -465,10 +463,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
+  position: relative;
 }
 header .icon__arrow-left {
   visibility: visible;
-  margin-left: 1rem;
+  position: absolute;
+  top: 38%;
+  left: 25px;
 }
 
 /** Color **/
