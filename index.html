@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood | Réservez le menu qui vous convient</title>
-	<link rel="icon" href="/assets/images/logo/ohmyfood-favicon.ico">
+	<link rel="icon" href="./assets/images/logo/ohmyfood-favicon.ico">
     <link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,10 @@
 		<img class="header__logo" src="assets/images/logo/ohmyfood.svg" alt="Logo Ohmyfood">
 	</header>
 	
-	<main>
-		<!-- Discovery -->
+	<main class="main-container">
+
+		<!-- Geolocation-->
 		<div class="geolocation">
-			<!-- Geolocation-->
 			<img class="geolocation__icon" src="./assets/images/icons/icon_pin.svg" alt="Icone de localisation">
 			<p class="geolocation__title">Paris,&nbsp;</p>
 			<!-- ** Test form ** -->
@@ -35,103 +35,111 @@
 			</form>
 		</div>
 
-		<section class="section section--lightgrey discovery">
-			<!-- Discovery-->
-			<h2>Réservez le menu qui vous convient</h2>
-			<h3 class="discovery__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
-			<p class="btn"><a href="#restaurants">Explorer nos restaurants</a></p>
+		<!-- Discovery-->
+		<section class="section section--lightgrey ">
+			<div class="sub-section discovery">
+				<h2>Réservez le menu qui vous convient</h2>
+				<h3 class="discovery__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+				<p class="btn"><a href="#restaurants">Explorer nos restaurants</a></p>
+			</div>
 		</section>
 
 		<!-- Explanation -->
 		<section class="section">
-			<h2>Fonctionnement</h2>
-			<div class="explain__step">
-				<p class="step">1</p>
-				<img src="./assets/images/icons/icon_mobile.svg" alt="Icone de téléphone mobile">
-				<p class="explain__text">Choisissez un restaurant</p>
-			</div>
-			<div class="explain__step">
-				<p class="step">2</p>
-				<img src="./assets/images/icons/icon_list.svg" alt="Icone de liste">
-				<p class="explain__text">Composez votre menu</p>
-			</div>
-			<div class="explain__step">
-				<p class="step">3</p>
-				<img src="./assets/images/icons/icon_store.svg" alt="Icone de magasin">
-				<p class="explain__text">Dégustez au restaurant</p>
+			<div class="sub-section explanation">
+				<h2>Fonctionnement</h2>
+				<div class="explain">
+					<div class="explain__step">
+						<p class="step">1</p>
+						<img src="./assets/images/icons/icon_mobile.svg" alt="Icone de téléphone mobile">
+						<p class="explain__text">Choisissez un restaurant</p>
+					</div>
+					<div class="explain__step">
+						<p class="step">2</p>
+						<img src="./assets/images/icons/icon_list.svg" alt="Icone de liste">
+						<p class="explain__text">Composez votre menu</p>
+					</div>
+					<div class="explain__step">
+						<p class="step">3</p>
+						<img src="./assets/images/icons/icon_store.svg" alt="Icone de magasin">
+						<p class="explain__text">Dégustez au restaurant</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<!-- List of restaurants -->
 		<section class="section section--lightgrey" id="restaurants">
-			<h2>Restaurants</h2>
-			<div class="restaurants__cards">
-				<a href="menus/la-palette-du-gout.html">
-					<article class="restaurant__card">
-						<img class="card_img" src="assets/images/restaurants/la-palette-du-gout.jpg" alt="Image de plat au restaurant">
-						<div class="tag__new">Nouveau</div>
-						<div class="restaurant__text">
-							<div>
-								<h3>La plalette du goût</h3>
-								<p>Ménilmontant</p>
+			<div class="sub-section restaurants">
+				<h2>Restaurants</h2>
+				<div class="restaurants__cards">
+					<a href="menus/la-palette-du-gout.html">
+						<article class="restaurant__card">
+							<img class="card_img" src="assets/images/restaurants/la-palette-du-gout.jpg" alt="Image de plat au restaurant">
+							<div class="tag__new">Nouveau</div>
+							<div class="restaurant__text">
+								<div>
+									<h3>La plalette du goût</h3>
+									<p>Ménilmontant</p>
+								</div>
+								<!-- Heart checkbox -->
+								<label class="heart-checkbox">
+									<input type="checkbox">
+									<span class="heart__icon"></span>
+								</label>
 							</div>
-							<!-- Heart checkbox -->
-							<label class="heart-checkbox">
-								<input type="checkbox">
-								<span class="heart__icon"></span>
-							  </label>
-						</div>
-					</article>
-				</a>
-				<a href="menus/la-note-enchantee.html">
-					<article class="restaurant__card">
-						<img class="card_img" src="assets/images/restaurants/la-note-enchantee.jpg" alt="Image de plat au restaurant">
-						<div class="tag__new">Nouveau</div>
-						<div class="restaurant__text">
-							<div>
-								<h3>La note enchantée</h3>
-								<p>Charonne</p>
+						</article>
+					</a>
+					<a href="menus/la-note-enchantee.html">
+						<article class="restaurant__card">
+							<img class="card_img" src="assets/images/restaurants/la-note-enchantee.jpg" alt="Image de plat au restaurant">
+							<div class="tag__new">Nouveau</div>
+							<div class="restaurant__text">
+								<div>
+									<h3>La note enchantée</h3>
+									<p>Charonne</p>
+								</div>
+								<!-- Heart checkbox -->
+								<label class="heart-checkbox">
+									<input type="checkbox">
+									<span class="heart__icon"></span>
+								</label>
 							</div>
-							<!-- Heart checkbox -->
-							<label class="heart-checkbox">
-								<input type="checkbox">
-								<span class="heart__icon"></span>
-							  </label>
-						</div>
-					</article>
-				</a>
-				<a href="menus/a-la-francaise.html">
-					<article class="restaurant__card">
-						<img class="card_img" src="assets/images/restaurants/a-la-francaise.jpg" alt="Image de plat au restaurant">
-						<div class="restaurant__text">
-							<div>
-								<h3>À la française</h3>
-								<p>Cité Rouge</p>
+						</article>
+					</a>
+					<a href="menus/a-la-francaise.html">
+						<article class="restaurant__card">
+							<img class="card_img" src="assets/images/restaurants/a-la-francaise.jpg" alt="Image de plat au restaurant">
+							<div class="restaurant__text">
+								<div>
+									<h3>À la française</h3>
+									<p>Cité Rouge</p>
+								</div>
+								<!-- Heart checkbox -->
+								<label class="heart-checkbox">
+									<input type="checkbox">
+									<span class="heart__icon"></span>
+								</label>
 							</div>
-							<!-- Heart checkbox -->
-							<label class="heart-checkbox">
-								<input type="checkbox">
-								<span class="heart__icon"></span>
-							  </label>
-						</div>
-					</article>
-				</a>
-				<a href="menus/le-delice-des-sens.html">
-					<article class="restaurant__card">
-						<img class="card_img" src="assets/images/restaurants/le-delice-des-sens.jpg" alt="Image de plat au restaurant">
-						<div class="restaurant__text">
-							<div>
-								<h3>La plalette du goût</h3>
-								<p>Ménilmontant</p>
+						</article>
+					</a>
+					<a href="menus/le-delice-des-sens.html">
+						<article class="restaurant__card">
+							<img class="card_img" src="assets/images/restaurants/le-delice-des-sens.jpg" alt="Image de plat au restaurant">
+							<div class="restaurant__text">
+								<div>
+									<h3>La plalette du goût</h3>
+									<p>Ménilmontant</p>
+								</div>
+								<!-- Heart checkbox -->
+								<label class="heart-checkbox">
+									<input type="checkbox">
+									<span class="heart__icon"></span>
+								</label>
 							</div>
-							<!-- Heart checkbox -->
-							<label class="heart-checkbox">
-								<input type="checkbox">
-								<span class="heart__icon"></span>
-							  </label>
-						</div>
-					</article>
-				</a>
+						</article>
+					</a>
+				</div>
 			</div>
 		</section>
 

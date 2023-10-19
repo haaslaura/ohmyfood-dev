@@ -14,17 +14,34 @@
 /*****************/
 /***** GLOBAL ****/
 /*****************/
-    
+
+/*** Consignes medias queries ***/
+
+//The site is mobile-first. Here are the instructions for the media queries:
+//Above 900px, display for tablets (in landscape mode).
+//Above 1024px, leave blank spaces on the sides.
+
+.main-container {
+  width: 100%;
+}
+
+
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 20px 50px 20px;
+  
+  &--lightgrey {
+    background-color: $grey-background;
+  }
+
+  .sub-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+  }
 }
 
-.section--lightgrey {
-  background-color: $grey-background;
-}
 
 a {
   color: inherit;
@@ -42,6 +59,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100%;
   background-color: #EAEAEA;
 
   .geolocation__icon {
@@ -68,9 +86,12 @@ a {
   }
 }
 
+
 .discovery {
+  justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 40px 20px 50px 20px;
 
   h3 {
     font-size: 18px;
@@ -84,42 +105,32 @@ a {
 }
 
 
-.explain__step {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  background-color: #F6F6F6;
-  @include shadow-block;
-  border-radius: 20px;
-  height: 73px;
-  margin-top: 20px;
-  margin-left: 10px;
-
-  .step {
+.explanation {
+  justify-content: center;
+  align-items: start;
+  padding: 50px 20px 60px 20px;
+  @media screen and (min-width: 900px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;/* À régler : sortie du cadre à cause du décalage sur les chiffres ! */
+  }
+  
+  .explain {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: $primary-color;
-    color: white;
-    font-weight: 500;
-    font-size: 0.89rem;
-    margin-right: 20px;
-    margin-left: -10px;
+    flex-direction: column;
+    width: 100%;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 30px;
+    }
   }
+}
 
-  img {
-    margin-right: 20px;
-  }
-
-  .explain__text {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 18.75px;
-  }
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px 70px 20px;
 }

@@ -1,5 +1,51 @@
 @import "../utils/mixins";
 
+// This file is about cards design
+
+/* Step cards, ex: home */
+
+.explain__step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  background-color: #F6F6F6;
+  @include shadow-block;
+  border-radius: 20px;
+  height: 73px;
+  width: 100%;
+  margin-top: 20px;
+  
+  .step {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    color: white;
+    font-weight: 500;
+    font-size: 0.89rem;
+    margin-right: 20px;
+    margin-left: -10px;
+  }
+  
+  img {
+  margin-right: 20px;
+  }
+  
+  .explain__text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18.75px;
+  }
+}
+
+/* Restaurants card, ex: home */
+
 .restaurant__card {
     background-color: white;
     border-radius: 15px;

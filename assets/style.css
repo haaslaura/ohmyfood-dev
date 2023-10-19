@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -387,6 +388,45 @@ p, ul, ol {
   clip-path: polygon(52% 21%, 63% 14%, 72% 10%, 84% 11%, 93% 17%, 98% 27%, 98% 39%, 95% 50%, 51% 100%, 5% 50%, 2% 39%, 2% 27%, 7% 17%, 16% 11%, 28% 10%, 37% 14%, 48% 21%);
 }
 
+/* Step cards, ex: home */
+.explain__step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 73px;
+  width: 100%;
+  margin-top: 20px;
+}
+.explain__step .step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-weight: 500;
+  font-size: 0.89rem;
+  margin-right: 20px;
+  margin-left: -10px;
+}
+.explain__step img {
+  margin-right: 20px;
+}
+.explain__step .explain__text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18.75px;
+}
+
+/* Restaurants card, ex: home */
 .restaurant__card {
   background-color: white;
   border-radius: 15px;
@@ -509,15 +549,23 @@ header .icon__arrow-left {
 /*****************/
 /***** GLOBAL ****/
 /*****************/
+/*** Consignes medias queries ***/
+.main-container {
+  width: 100%;
+}
+
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 20px 50px 20px;
 }
-
 .section--lightgrey {
   background-color: #F6F6F6;
+}
+.section .sub-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
 }
 
 a {
@@ -535,6 +583,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100%;
   background-color: #EAEAEA;
 }
 .geolocation .geolocation__icon {
@@ -559,8 +608,10 @@ a {
 }
 
 .discovery {
+  justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 40px 20px 50px 20px;
 }
 .discovery h3 {
   font-size: 18px;
@@ -571,41 +622,37 @@ a {
   margin-top: 40px;
 }
 
-.explain__step {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  background-color: #F6F6F6;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  height: 73px;
-  margin-top: 20px;
-  margin-left: 10px;
+.explanation {
+  justify-content: center;
+  align-items: start;
+  padding: 50px 20px 60px 20px;
 }
-.explain__step .step {
+@media screen and (min-width: 900px) {
+  .explanation {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; /* À régler : sortie du cadre à cause du décalage sur les chiffres ! */
+  }
+}
+.explanation .explain {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .explanation .explain {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+  }
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #9356DC;
-  color: white;
-  font-weight: 500;
-  font-size: 0.89rem;
-  margin-right: 20px;
-  margin-left: -10px;
-}
-.explain__step img {
-  margin-right: 20px;
-}
-.explain__step .explain__text {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 18.75px;
+  padding: 60px 20px 70px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
