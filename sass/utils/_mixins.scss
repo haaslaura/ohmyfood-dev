@@ -1,3 +1,5 @@
+// This file is about the mixins
+
 @mixin gradient ($direction, $list){
     background: -webkit-linear-gradient($direction, $list);
   }

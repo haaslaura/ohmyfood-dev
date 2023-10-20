@@ -1,8 +1,9 @@
-@import "../utils/mixins";
-
 // This file is about cards design
 
-/* Step cards, ex: home */
+@import "../utils/mixins";
+
+
+/** Step cards, ex: home **/
 
 .explain__step {
   display: flex;
@@ -44,7 +45,7 @@
   }
 }
 
-/* Restaurants card, ex: home */
+/** Restaurants card, ex: home **/
 
 .restaurant__card {
     background-color: white;
