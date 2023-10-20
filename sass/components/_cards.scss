@@ -101,3 +101,34 @@
       z-index: 2;
     }
 }
+
+/** Menu card, ex: pages menus **/
+.menu__card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  align-items: flex-end;
+  height: auto;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+  @include shadow-block;
+
+  .menu__text {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: stretch;
+      h5 {
+        margin: 0px 0px 10px 0px;
+      }
+      p {margin: 0px;}
+  }
+
+  .menu__price {
+    margin: 0px;
+    font-weight: 700;
+  }
+
+}
