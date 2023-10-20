@@ -357,6 +357,7 @@ p, ul, ol {
 /** Main button **/
 .btn {
   display: block;
+  cursor: pointer;
   width: 260px;
   text-align: center;
   border-radius: 2em;
@@ -581,46 +582,43 @@ header .icon__arrow-left {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
-/*****************/
-/***** GLOBAL ****/
-/*****************/
-/*** Consignes medias queries ***/
-.main-container {
-  width: 100%;
-  box-sizing: border-box; /* REGLE LA SORTIE DE CADRE */
+/** Mains typographies **/
+h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 1.75rem;
+  line-height: 2.55rem;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.section--lightgrey {
-  background-color: #F6F6F6;
-}
-.section .sub-section {
-  display: flex;
-  flex-direction: column;
-  max-width: 1024px;
-  box-sizing: border-box;
-}
-@media screen and (min-width: 900px) {
-  .section .sub-section {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+h2, h3, h4, h5, p, ul, ol {
+  font-family: "Roboto", sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.76rem;
 }
 
-/*****************/
-/****** BEM ******/
-/* Main sections */
-/*****************/
+h3 {
+  font-size: 1.13rem;
+  font-weight: 700;
+  line-height: 1.32rem;
+}
+
+p, ul, ol {
+  font-size: 0.94rem;
+  font-weight: 300;
+  line-height: 1.1rem;
+}
+
+/** Over **/
+.footer__title {
+  font-family: "Shrikhand", serif;
+  font-size: 1.2rem;
+  line-height: 1.64rem;
+  margin: 0px;
+}
+
 .geolocation {
   z-index: 1;
   display: flex;
@@ -704,6 +702,45 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 50px 100px;
   }
+}
+
+/** Color **/
+/** List gradient **/
+/** Font familly **/
+/*****************/
+/***** GLOBAL ****/
+/*****************/
+/*** Consignes medias queries ***/
+.main-container {
+  width: 100%;
+  box-sizing: border-box; /* REGLE LA SORTIE DE CADRE */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section--lightgrey {
+  background-color: #F6F6F6;
+}
+.section .sub-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 900px) {
+  .section .sub-section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

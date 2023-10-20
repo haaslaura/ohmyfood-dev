@@ -7,6 +7,9 @@
 @import "./layout/header";
 @import "./layout/footer";
 
+@import "./pages/home";
+@import "./pages/menus";
+
 @import "./utils/variables";
 @import "./utils/mixins";
 
@@ -52,101 +55,4 @@
 a {
   color: inherit;
   text-decoration: none;
-}
-
-/*****************/
-/****** BEM ******/
-/* Main sections */
-/*****************/
-    
-.geolocation {
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100%;
-  background-color: #EAEAEA;
-
-  .geolocation__icon {
-    margin-right: 16px;
-  }
-
-  .geolocation__title {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 18.75px;
-  }
-
-  .geolocation__title--input {
-    font-family: $text-font;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid lightgray;
-    background: none;
-    min-width: 100px;
-    width: 100px;
-  }
-  .geolocation__title--input:focus {
-    border-bottom: 1px solid black;
-  }
-}
-
-
-.discovery {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px 50px 20px;
-
-  h3 {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21.09px;
-  }
-
-  &__btn--accueil {
-    margin-top: 40px;
-  }
-}
-
-
-.explanation {
-  justify-content: center;
-  align-items: start;
-  padding: 50px 20px 60px 20px;
-  
-  .explain {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    @media screen and (min-width: 900px) {
-      flex-direction: row;
-      justify-content: space-around;
-      gap: 30px;
-    }
-  }
-}
-
-
-.restaurants {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px 20px 70px 20px;
-
-  h2 {
-    margin: 0px;
-  }
-  .restaurants__cards {
-    width: 100%;
-
-    @media screen and (min-width: 900px){
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px 100px;
-    }
-  }
 }
