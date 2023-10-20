@@ -48,11 +48,11 @@
 /** Restaurants card, ex: home **/
 
 .restaurant__card {
-    background-color: white;
-    border-radius: 15px;
-    position: relative;
-    margin-top: 20px;
-    @include shadow-block;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  margin-top: 20px;
+  @include shadow-block;
   
     img {
       border-radius: 15px 15px 0px 0px;
@@ -100,4 +100,4 @@
       right: 20px;
       z-index: 2;
     }
-  }
+}

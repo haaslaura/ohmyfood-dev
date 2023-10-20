@@ -23,13 +23,15 @@
 
 .main-container {
   width: 100%;
+  box-sizing: border-box; /* REGLE LA SORTIE DE CADRE */
+  border: 1px solid orange;
 }
-
 
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 1px solid red;
   
   &--lightgrey {
     background-color: $grey-background;
@@ -39,9 +41,16 @@
     display: flex;
     flex-direction: column;
     max-width: 1024px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    
+    @media screen and (min-width: 900px) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
-
 
 a {
   color: inherit;
@@ -50,6 +59,7 @@ a {
 
 /*****************/
 /****** BEM ******/
+/* Main sections */
 /*****************/
     
 .geolocation {
@@ -109,11 +119,6 @@ a {
   justify-content: center;
   align-items: start;
   padding: 50px 20px 60px 20px;
-  @media screen and (min-width: 900px) {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;/* À régler : sortie du cadre à cause du décalage sur les chiffres ! */
-  }
   
   .explain {
     display: flex;
@@ -127,10 +132,24 @@ a {
   }
 }
 
+
 .restaurants {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 60px 20px 70px 20px;
+
+  h2 {
+    margin: 0px;
+  }
+  .restaurants__cards {
+    width: 100%;
+    border: 1px solid purple;
+    @media screen and (min-width: 900px){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px 100px;
+    }
+  }
 }
