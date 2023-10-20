@@ -2,6 +2,7 @@
 
 @import "../utils/variables";
 
+/** Mains typographies **/
 h1 {
     font-family: $title-font;
     font-size: 1.75rem; 
@@ -28,4 +29,13 @@ p, ul, ol {
     font-size: 0.94rem;
     font-weight: 300;
     line-height: 1.1rem;
+}
+
+/** Over **/
+
+.footer__title {
+    font-family: $title-font;
+    font-size: 1.2rem;
+    line-height: 1.64rem;
+    margin: 0px;
 }

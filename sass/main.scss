@@ -24,15 +24,13 @@
 .main-container {
   width: 100%;
   box-sizing: border-box; /* REGLE LA SORTIE DE CADRE */
-  border: 1px solid orange;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid red;
-  
+
   &--lightgrey {
     background-color: $grey-background;
   }
@@ -42,7 +40,6 @@
     flex-direction: column;
     max-width: 1024px;
     box-sizing: border-box;
-    border: 2px solid blue;
     
     @media screen and (min-width: 900px) {
       width: 100%;
@@ -145,7 +142,7 @@ a {
   }
   .restaurants__cards {
     width: 100%;
-    border: 1px solid purple;
+
     @media screen and (min-width: 900px){
       display: grid;
       grid-template-columns: 1fr 1fr;
