@@ -8,6 +8,7 @@ $grey-background: #F6F6F6;
 
 /** List gradient **/
 $list1: $primary-color, $secondary-color;
+$list1-lighten: lighten($primary-color, 4%), lighten($secondary-color, 4%);
 
 /** Font familly **/
 $title-font: 'Shrikhand', serif;
