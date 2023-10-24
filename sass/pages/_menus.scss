@@ -9,7 +9,6 @@
 //Above 900px, display for tablets (in landscape mode).
 //Above 1024px, leave blank spaces on the sides.
 
-
 .img__hero {
     z-index: 2;
     width: 100%;
@@ -20,30 +19,37 @@
 
 .pagemenu {
     z-index: 3;
-    position: relative;
-    top: -55px;
+    margin-top: -55px;
     border-radius: 30px 30px 0px 0px;
     padding: 30px 20px 40px 20px;
-    border: 1px solid red;
+    max-width: 1024px;
 
     @media screen and (min-width:1024px) {
-        width: 1055px;
-        
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
-
 
     .pagemenu__title {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-        border: 1px solid red;
+        align-items: center;
+
+        .heart-checkbox {
+            margin-right: 8%;
+        }
+    @media screen and (min-width: 900px) {
+        justify-content: center;
+        .heart-checkbox {
+            margin-left: 20px;
+            margin-right: 0px;
+        }
+    }
     }
 
     .menu {
-
         h4 {
             margin-top: 40px;
             margin-bottom: 10px;

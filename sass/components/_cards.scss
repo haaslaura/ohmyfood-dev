@@ -45,6 +45,7 @@
   }
 }
 
+
 /** Restaurants card, ex: home **/
 
 .restaurant__card {
@@ -54,53 +55,46 @@
   margin-top: 20px;
   @include shadow-block;
   
-    img {
-      border-radius: 15px 15px 0px 0px;
-      height: 210px;
-      width: 100%;
-      object-fit: cover;
-      object-position: 50% 100%;
-      z-index: 1;
+  .card_img {
+    border-radius: 15px 15px 0px 0px;
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+    z-index: 1;
+  }
+
+  .restaurant__text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px;
+    h3 {
+      margin: 0px 0px 8px 0px;
     }
-  
-    .restaurant__text {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content:space-between;
-      align-items: center;
-      padding: 15px;
-      h3 {
-        margin: 0px 0px 8px 0px;
-      }
-      p {
-        font-size: 1.06rem;
-        margin: 0px;
-      }
-      .heart-checkbox {
-        position: relative;
-        right: 20px;
-        .heart__icon {
-            position: absolute;
-            top: -4px;
-            left: -5px;
-        }
-        input[type="checkbox"] {
-            visibility: hidden;
-        }
-        input[type="checkbox"]:checked + .heart__icon {
-            background-color: #ff0000;
-        }
-      }
+    p {
+      font-size: 1.06rem;
+      margin: 0px;
     }
-  
-    .tag__new {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 2;
-    }
+  }
+
+  .tag__new {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
 }
+
+a + .heart-checkbox {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  z-index: 2;
+}
+
 
 /** Menu card, ex: pages menus **/
 .menu__card {
@@ -131,7 +125,7 @@
     .menu__text--ellipsis {
         margin: 0px;
         /* Hide text if width is too small after click animation */
-        max-width: 280px;
+        max-width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -171,5 +165,14 @@
 }
 
 .menu__card:active .menu__text--ellipsis {
+  max-width: calc(280px - 60px);
+}
+
+.menu__card:hover > .menu__order,
+.menu__card:hover > .menu__price {
+  transform: translateX(-59px);
+}
+
+.menu__card:hover .menu__text--ellipsis {
   max-width: calc(280px - 60px);
 }

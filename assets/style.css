@@ -393,6 +393,7 @@ p, ul, ol {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
+/** For tag new and futur tag **/
 .tag__new {
   display: flex;
   flex-direction: column;
@@ -409,11 +410,25 @@ p, ul, ol {
   font-weight: 500;
 }
 
-.heart__icon {
+/** Heart checkbox **/
+.heart-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+.heart-checkbox .heart {
+  position: absolute;
+  top: -2px;
+  left: -5px;
   width: 24px;
-  height: 24px;
-  background-color: #9356DC;
-  clip-path: polygon(52% 21%, 63% 14%, 72% 10%, 84% 11%, 93% 17%, 98% 27%, 98% 39%, 95% 50%, 51% 100%, 5% 50%, 2% 39%, 2% 27%, 7% 17%, 16% 11%, 28% 10%, 37% 14%, 48% 21%);
+  height: 22px;
+}
+.heart-checkbox .checkbox:not(:checked) + .heart-empty,
+.heart-checkbox .checkbox:checked + .heart-empty + .heart-full {
+  visibility: visible;
+}
+.heart-checkbox .checkbox:checked + .heart-empty,
+.heart-checkbox .checkbox:not(:checked) + .heart-empty + .heart-full {
+  visibility: hidden;
 }
 
 /** Step cards, ex: home **/
@@ -462,7 +477,7 @@ p, ul, ol {
   margin-top: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-.restaurant__card img {
+.restaurant__card .card_img {
   border-radius: 15px 15px 0px 0px;
   height: 210px;
   width: 100%;
@@ -485,25 +500,17 @@ p, ul, ol {
   font-size: 1.06rem;
   margin: 0px;
 }
-.restaurant__card .restaurant__text .heart-checkbox {
-  position: relative;
-  right: 20px;
-}
-.restaurant__card .restaurant__text .heart-checkbox .heart__icon {
-  position: absolute;
-  top: -4px;
-  left: -5px;
-}
-.restaurant__card .restaurant__text .heart-checkbox input[type=checkbox] {
-  visibility: hidden;
-}
-.restaurant__card .restaurant__text .heart-checkbox input[type=checkbox]:checked + .heart__icon {
-  background-color: #ff0000;
-}
 .restaurant__card .tag__new {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 2;
+}
+
+a + .heart-checkbox {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
   z-index: 2;
 }
 
@@ -534,7 +541,7 @@ p, ul, ol {
 .menu__card .menu__text .menu__text--ellipsis {
   margin: 0px;
   /* Hide text if width is too small after click animation */
-  max-width: 280px;
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -569,20 +576,16 @@ p, ul, ol {
   max-width: 220px;
 }
 
-.header__home {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 63px;
-  background-color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  position: sticky;
-  top: 0;
-  z-index: 3;
+.menu__card:hover > .menu__order,
+.menu__card:hover > .menu__price {
+  transform: translateX(-59px);
 }
 
-.header__menus {
+.menu__card:hover .menu__text--ellipsis {
+  max-width: 220px;
+}
+
+.header {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -592,11 +595,10 @@ p, ul, ol {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
-  z-index: 3;
-  position: relative;
+  z-index: 99;
 }
-.header__menus .icon__arrow-left {
-  visibility: visible;
+
+.icon__arrow-left {
   position: absolute;
   top: 38%;
   left: 25px;
@@ -725,6 +727,7 @@ p, ul, ol {
   background-color: #EAEAEA;
 }
 .geolocation .geolocation__icon {
+  margin-left: 12%;
   margin-right: 16px;
 }
 .geolocation .geolocation__title {
@@ -738,8 +741,7 @@ p, ul, ol {
   border: none;
   border-bottom: 1px solid lightgray;
   background: none;
-  min-width: 100px;
-  width: 100px;
+  width: 100%;
 }
 .geolocation .geolocation__title--input:focus {
   border-bottom: 1px solid black;
@@ -867,15 +869,14 @@ p, ul, ol {
 
 .pagemenu {
   z-index: 3;
-  position: relative;
-  top: -55px;
+  margin-top: -55px;
   border-radius: 30px 30px 0px 0px;
   padding: 30px 20px 40px 20px;
-  border: 1px solid red;
+  max-width: 1024px;
 }
 @media screen and (min-width: 1024px) {
   .pagemenu {
-    width: 1055px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -885,7 +886,19 @@ p, ul, ol {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  border: 1px solid red;
+  align-items: center;
+}
+.pagemenu .pagemenu__title .heart-checkbox {
+  margin-right: 8%;
+}
+@media screen and (min-width: 900px) {
+  .pagemenu .pagemenu__title {
+    justify-content: center;
+  }
+  .pagemenu .pagemenu__title .heart-checkbox {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
 }
 .pagemenu .menu h4 {
   margin-top: 40px;
