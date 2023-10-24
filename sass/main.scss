@@ -24,9 +24,18 @@
 //Above 900px, display for tablets (in landscape mode).
 //Above 1024px, leave blank spaces on the sides.
 
+body {
+  width: auto; /* PROBLEME AU BODY LARGEUR MAX 1024*/
+}
+
 .main-container {
   width: 100%;
   box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .section {
