@@ -104,31 +104,72 @@
 
 /** Menu card, ex: pages menus **/
 .menu__card {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content:space-between;
-  align-items: flex-end;
-  height: auto;
-  padding: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  height: 69px;
   border-radius: 15px;
   margin-top: 1rem;
   @include shadow-block;
 
-  .menu__text {
+  .menu__card__item {
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
-    align-items: stretch;
-      h5 {
-        margin: 0px 0px 10px 0px;
+    flex-wrap: nowrap;
+  }
+
+  .menu__text {
+    justify-content: space-between;
+
+    padding: 15px;
+    gap: 5px;
+
+    .menu__text--ellipsis {
+        margin: 0px;
+        /* Hide text if width is too small after click animation */
+        max-width: 280px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: transform 250ms;
       }
-      p {margin: 0px;}
   }
 
   .menu__price {
-    margin: 0px;
+    justify-content: flex-end;
+    
     font-weight: 700;
+    margin-right: 20px;
+    
+    transition: transform 250ms;
   }
 
+  .menu__order {
+    justify-content: center;
+    align-items: center;
+    
+    background: $tertirary-color;
+    position: absolute;
+    right: -60px;
+    overflow: hidden;
+    width: 59px;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+
+    transform: translateX(0);
+    transition: transform 250ms;
+  }
+}
+
+.menu__card:active > .menu__order,
+.menu__card:active > .menu__price {
+  transform: translateX(-59px);
+}
+
+.menu__card:active .menu__text--ellipsis {
+  max-width: calc(280px - 60px);
 }
