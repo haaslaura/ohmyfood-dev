@@ -13,6 +13,7 @@
     background-color: #EAEAEA;
   
     .geolocation__icon {
+      margin-left: 12%;
       margin-right: 16px;
     }
   
@@ -28,8 +29,7 @@
       border: none;
       border-bottom: 1px solid lightgray;
       background: none;
-      min-width: 100px;
-      width: 100px;
+      width: 100%;
     }
     .geolocation__title--input:focus {
       border-bottom: 1px solid black;
