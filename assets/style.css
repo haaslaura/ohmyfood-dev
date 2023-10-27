@@ -438,7 +438,9 @@ h4, p, ul, ol {
   visibility: hidden;
 }
 
-/** Step cards, ex: home **/
+/*****************/
+/*** STEP CARD ***/
+/*****************/
 .explain__step {
   display: flex;
   flex-direction: row;
@@ -476,12 +478,14 @@ h4, p, ul, ol {
   line-height: 18.75px;
 }
 
-/** Restaurants card, ex: home **/
+/*******************/
+/* RESTAURANT CARD */
+/*******************/
 .restaurant__card {
-  background-color: white;
-  border-radius: 15px;
   position: relative;
   margin-top: 20px;
+  background-color: white;
+  border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .restaurant__card .card_img {
@@ -509,19 +513,20 @@ h4, p, ul, ol {
 }
 .restaurant__card .tag__new {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5%;
+  right: 5%;
   z-index: 2;
 }
-
-a + .heart-checkbox {
+.restaurant__card a + .heart-checkbox {
   position: absolute;
   bottom: 10%;
   right: 10%;
   z-index: 2;
 }
 
-/** Menu card, ex: pages menus **/
+/*******************/
+/* RESTAURANT CARD */
+/*******************/
 .menu__card {
   position: relative;
   display: flex;
@@ -534,6 +539,7 @@ a + .heart-checkbox {
   border-radius: 15px;
   margin-top: 1rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  /** start animation **/
 }
 .menu__card .menu__card__item {
   display: flex;
@@ -544,15 +550,14 @@ a + .heart-checkbox {
   justify-content: space-between;
   padding: 15px;
   gap: 5px;
+  width: 100%;
+  transition: transform 250ms;
 }
 .menu__card .menu__text .menu__text--ellipsis {
   margin: 0px;
-  /* Hide text if width is too small after click animation */
-  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: transform 250ms;
 }
 .menu__card .menu__price {
   justify-content: flex-end;
@@ -573,28 +578,19 @@ a + .heart-checkbox {
   transform: translateX(0);
   transition: transform 250ms;
 }
-
-.menu__card:active > .menu__order,
-.menu__card:active > .menu__price {
+.menu__card:active > .menu__text, .menu__card:hover > .menu__text {
+  width: 60%;
+}
+.menu__card:active > .menu__order, .menu__card:active > .menu__price, .menu__card:hover > .menu__order, .menu__card:hover > .menu__price {
   transform: translateX(-59px);
-}
-
-.menu__card:active .menu__text--ellipsis {
-  max-width: 220px;
-}
-
-.menu__card:hover > .menu__order,
-.menu__card:hover > .menu__price {
-  transform: translateX(-59px);
-}
-
-.menu__card:hover .menu__text--ellipsis {
-  max-width: 220px;
 }
 
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/****************************/
+/* LOADER STYLE & ANIMATION */
+/****************************/
 .loader-ellipsis {
   display: inline-block;
   position: relative;
