@@ -1,6 +1,7 @@
+// This file content specific scss code for the home page
+
 @import "../base/typography";
 
-// This file content specific scss code for the home page
 
 /*********************/
 /* APPARITION LOADER */
@@ -39,18 +40,18 @@
 }
 
 /*****************/
-/**** BLOC BEM ***/
+/**** HOME BEM ***/
 /*****************/
 
 .geolocation {
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-    background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: #EAEAEA;
+  z-index: 1;
   
     .geolocation__icon {
       margin-left: 12%;
@@ -63,7 +64,7 @@
       line-height: 18.75px;
     }
   
-    .geolocation__title--input {
+    &__title--input {
       font-family: $text-font;
       outline: none;
       border: none;
@@ -71,65 +72,60 @@
       background: none;
       width: 100%;
     }
-    .geolocation__title--input:focus {
+    &__title--input:focus {
       border-bottom: 1px solid black;
     }
   }
   
   
-  .discovery {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px 50px 20px;
-  
-    h3 {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 21.09px;
-    }
-  
-    &__btn--accueil {
-      margin-top: 40px;
-    }
+.discovery {
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 50px 20px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
   }
-  
-  
-  .explanation {
-    justify-content: center;
-    align-items: start;
-    padding: 50px 20px 60px 20px;
-    
-    .explain {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      @media screen and (min-width: 900px) {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 30px;
-      }
-    }
+
+  &__btn--accueil {
+    margin-top: 40px;
   }
+}
   
   
-  .restaurants {
+.explanation {
+  align-items: flex-start;
+  padding: 50px 20px 60px 20px;
+  
+  .explain {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 60px 20px 70px 20px;
-  
-    h2 {
-      margin: 0px;
-    }
-    .restaurants__cards {
-      width: 100%;
-  
-      @media screen and (min-width: 900px){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px 100px;
-      }
+    width: 100%;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 30px;
     }
   }
+}
+  
+  
+.restaurants {
+  align-items: flex-start;
+  padding: 60px 20px 70px 20px;
+
+  h2 {
+    margin: 0px;
+  }
+  .restaurants__cards {
+    width: 100%;
+
+    @media screen and (min-width: 900px){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px 100px;
+    }
+  }
+}
