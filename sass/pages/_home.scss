@@ -2,6 +2,46 @@
 
 // This file content specific scss code for the home page
 
+/*********************/
+/* APPARITION LOADER */
+/*********************/
+
+.loading-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255, 0.85);
+
+  animation-name: loading-loader;
+  animation-delay: 2s;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; // Play animation one time
+  animation-fill-mode: forwards; // The animation retains its final state
+
+  pointer-events: none; // Disables capture of mouse and touch events
+
+  @keyframes loading-loader {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+/*****************/
+/**** BLOC BEM ***/
+/*****************/
+
 .geolocation {
     z-index: 1;
     display: flex;

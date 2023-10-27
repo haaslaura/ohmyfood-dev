@@ -659,7 +659,7 @@ a + .heart-checkbox {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 98;
 }
 
 .icon__arrow-left {
@@ -780,6 +780,40 @@ p, ul, ol {
   margin: 0px;
 }
 
+/*********************/
+/* APPARITION LOADER */
+/*********************/
+.loading-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.85);
+  animation-name: loading-loader;
+  animation-delay: 2s;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+@keyframes loading-loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*****************/
+/**** BLOC BEM ***/
+/*****************/
 .geolocation {
   z-index: 1;
   display: flex;
@@ -992,6 +1026,7 @@ p, ul, ol {
 /*** Consignes medias queries ***/
 body {
   width: auto;
+  overflow-x: hidden;
 }
 
 .main-container {
