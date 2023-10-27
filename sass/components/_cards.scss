@@ -106,9 +106,9 @@
 }
 
 
-/*******************/
-/* RESTAURANT CARD */
-/*******************/
+/******************/
+/*** MENUS CARD ***/
+/******************/
 
 // ex: menus pages **/
 
@@ -137,6 +137,8 @@
     gap: 5px;
     width: 100%;
     transition: transform 250ms;
+    overflow: hidden; // Hide text if width is too small
+    text-overflow: ellipsis;
 
     .menu__text--ellipsis {
         margin: 0px;
