@@ -3,6 +3,7 @@
 
 @import "./components/buttons";
 @import "./components/cards";
+@import "./components/loaders";
 
 @import "./layout/header";
 @import "./layout/footer";
@@ -25,7 +26,7 @@
 //Above 1024px, leave blank spaces on the sides.
 
 body {
-  width: auto; /* PROBLEME AU BODY LARGEUR MAX 1024*/
+  width: auto;
 }
 
 .main-container {
