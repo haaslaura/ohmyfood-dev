@@ -681,24 +681,22 @@ h4, p, ul, ol {
 /** List gradient **/
 /** Font familly **/
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   background-color: #353535;
   padding: 22px 25px;
   color: white;
 }
+.footer--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 @media screen and (min-width: 900px) {
   .footer {
     flex-direction: row-reverse;
-    justify-content: flex-start;
     align-items: flex-end;
   }
 }
 .footer .footer__nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   margin-top: 15px;
 }
 @media screen and (min-width: 900px) {
