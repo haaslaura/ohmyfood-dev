@@ -314,7 +314,9 @@ template {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
-/** Mains typographies **/
+/*****************/
+/*** MAIN TYPO ***/
+/*****************/
 h1 {
   font-family: "Shrikhand", serif;
   font-size: 1.75rem;
@@ -328,36 +330,41 @@ h2, h3, h4, h5, p, ul, ol {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700;
   line-height: 1.76rem;
 }
 
-h3 {
+h3, h5 {
   font-size: 1.13rem;
-  font-weight: 700;
   line-height: 1.32rem;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 300;
   line-height: 1.17rem;
   text-transform: uppercase;
 }
 
-h5 {
-  font-size: 1.13rem;
-  font-weight: 500;
-  line-height: 1.31rem;
-}
-
 p, ul, ol {
   font-size: 0.94rem;
-  font-weight: 300;
   line-height: 1.1rem;
 }
 
-/** Over **/
+/** Font-weight **/
+h2, h3 {
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h4, p, ul, ol {
+  font-weight: 300;
+}
+
+/*****************/
+/***** OTHER *****/
+/*****************/
 .footer__title {
   font-family: "Shrikhand", serif;
   font-size: 1.2rem;
@@ -729,7 +736,9 @@ a + .heart-checkbox {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
-/** Mains typographies **/
+/*****************/
+/*** MAIN TYPO ***/
+/*****************/
 h1 {
   font-family: "Shrikhand", serif;
   font-size: 1.75rem;
@@ -743,36 +752,41 @@ h2, h3, h4, h5, p, ul, ol {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700;
   line-height: 1.76rem;
 }
 
-h3 {
+h3, h5 {
   font-size: 1.13rem;
-  font-weight: 700;
   line-height: 1.32rem;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 300;
   line-height: 1.17rem;
   text-transform: uppercase;
 }
 
-h5 {
-  font-size: 1.13rem;
-  font-weight: 500;
-  line-height: 1.31rem;
-}
-
 p, ul, ol {
   font-size: 0.94rem;
-  font-weight: 300;
   line-height: 1.1rem;
 }
 
-/** Over **/
+/** Font-weight **/
+h2, h3 {
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h4, p, ul, ol {
+  font-weight: 300;
+}
+
+/*****************/
+/***** OTHER *****/
+/*****************/
 .footer__title {
   font-family: "Shrikhand", serif;
   font-size: 1.2rem;
@@ -902,7 +916,9 @@ p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
-/** Mains typographies **/
+/*****************/
+/*** MAIN TYPO ***/
+/*****************/
 h1 {
   font-family: "Shrikhand", serif;
   font-size: 1.75rem;
@@ -916,36 +932,41 @@ h2, h3, h4, h5, p, ul, ol {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700;
   line-height: 1.76rem;
 }
 
-h3 {
+h3, h5 {
   font-size: 1.13rem;
-  font-weight: 700;
   line-height: 1.32rem;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 300;
   line-height: 1.17rem;
   text-transform: uppercase;
 }
 
-h5 {
-  font-size: 1.13rem;
-  font-weight: 500;
-  line-height: 1.31rem;
-}
-
 p, ul, ol {
   font-size: 0.94rem;
-  font-weight: 300;
   line-height: 1.1rem;
 }
 
-/** Over **/
+/** Font-weight **/
+h2, h3 {
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h4, p, ul, ol {
+  font-weight: 300;
+}
+
+/*****************/
+/***** OTHER *****/
+/*****************/
 .footer__title {
   font-family: "Shrikhand", serif;
   font-size: 1.2rem;
