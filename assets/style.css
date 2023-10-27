@@ -375,7 +375,9 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
-/** Main button **/
+/*****************/
+/** MAIN BUTTON **/
+/*****************/
 .btn {
   display: block;
   cursor: pointer;
@@ -400,7 +402,9 @@ h4, p, ul, ol {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
-/** For tag new and futur tag **/
+/*****************/
+/****** TAG ******/
+/*****************/
 .tag__new {
   display: flex;
   flex-direction: column;
@@ -417,7 +421,9 @@ h4, p, ul, ol {
   font-weight: 500;
 }
 
-/** Heart checkbox **/
+/******************/
+/* HEART CHECKBOX */
+/******************/
 .heart-checkbox {
   position: relative;
   cursor: pointer;
