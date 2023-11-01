@@ -140,7 +140,7 @@
 
   animation: animation-card 3000ms cubic-bezier(.11,.52,.13,.99);
   animation-fill-mode: both;
-  @for $i from 1 through 9 {
+  @for $i from 1 through 10 {
     &--#{$i} {
         animation-delay: 250ms * $i;
       }
