@@ -533,11 +533,11 @@ h4, p, ul, ol {
 /******************/
 /*** MENUS CARD ***/
 /******************/
-/** start card animation **/
+/** Card animation **/
 @keyframes animation-card {
   0% {
     transform: translateX(9999px);
-    opacity: 0.1;
+    opacity: 0.3;
   }
   100% {
     transform: translateX(0px);
@@ -556,39 +556,39 @@ h4, p, ul, ol {
   border-radius: 15px;
   margin-top: 1rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  animation: animation-card 3000ms cubic-bezier(0.11, 0.52, 0.13, 0.99);
+  animation: animation-card 2800ms cubic-bezier(0.11, 0.52, 0.13, 0.99);
   animation-fill-mode: both;
   /** start animation in card **/
 }
 .menu__card--1 {
-  animation-delay: 250ms;
+  animation-delay: 280ms;
 }
 .menu__card--2 {
-  animation-delay: 500ms;
+  animation-delay: 560ms;
 }
 .menu__card--3 {
-  animation-delay: 750ms;
+  animation-delay: 840ms;
 }
 .menu__card--4 {
-  animation-delay: 1000ms;
+  animation-delay: 1120ms;
 }
 .menu__card--5 {
-  animation-delay: 1250ms;
+  animation-delay: 1400ms;
 }
 .menu__card--6 {
-  animation-delay: 1500ms;
+  animation-delay: 1680ms;
 }
 .menu__card--7 {
-  animation-delay: 1750ms;
+  animation-delay: 1960ms;
 }
 .menu__card--8 {
-  animation-delay: 2000ms;
+  animation-delay: 2240ms;
 }
 .menu__card--9 {
-  animation-delay: 2250ms;
+  animation-delay: 2520ms;
 }
 .menu__card--10 {
-  animation-delay: 2500ms;
+  animation-delay: 2800ms;
 }
 .menu__card .menu__card__item {
   display: flex;
