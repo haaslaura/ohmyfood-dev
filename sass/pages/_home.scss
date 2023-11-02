@@ -1,5 +1,6 @@
 // This file content specific scss code for the home page
 
+@import "../utils/variables";
 @import "../base/typography";
 
 
@@ -8,8 +9,7 @@
 /*********************/
 
 .loading-loader {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: center;
   align-items: center;
 
@@ -44,13 +44,12 @@
 /*****************/
 
 .geolocation {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
-  background-color: #EAEAEA;
+  background-color: $dark-background;
   z-index: 1;
   
     .geolocation__icon {
@@ -100,10 +99,9 @@
   padding: 50px 20px 60px 20px;
   
   .explain {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     width: 100%;
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: $min-width) {
       flex-direction: row;
       justify-content: space-around;
       gap: 30px;
@@ -122,7 +120,7 @@
   .restaurants__cards {
     width: 100%;
 
-    @media screen and (min-width: 900px){
+    @media screen and (min-width: $min-width){
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px 100px;

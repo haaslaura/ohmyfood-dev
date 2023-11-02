@@ -28,44 +28,37 @@
 body {
   width: auto;
   overflow-x: hidden;
-}
 
-.main-container {
-  width: 100%;
-  box-sizing: border-box;
-
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  &--lightgrey {
-    background-color: $grey-background;
+  a {
+    color: inherit;
+    text-decoration: none;
   }
-
-  .sub-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1024px;
+  
+  .main-container {
+    width: 100%;
     box-sizing: border-box;
+    @include flex-column;
+    justify-content: center;
     
-    @media screen and (min-width: 900px) {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+    .section {
+      @include flex-column;
+      justify-content: center;
+      
+      &--lightgrey {
+        background-color: $section-background;
+      }
+      
+      .sub-section {
+        @include flex-column;
+        justify-content: center;
+        max-width: $max-width;
+        box-sizing: border-box;
+        @media screen and (min-width: $min-width) {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
     }
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }

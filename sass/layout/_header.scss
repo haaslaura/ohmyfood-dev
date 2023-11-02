@@ -1,8 +1,7 @@
 // Header's informations, all pages
 
 .header {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   justify-content: center;
   align-items: center;
 

@@ -19,6 +19,7 @@
     @include gradient(bottom, $list1);
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
+  
   .loader-ellipsis div:nth-child(1) {
     left: 8px;
     animation: loader-ellipsis1 0.6s infinite;
@@ -35,6 +36,7 @@
     left: 56px;
     animation: loader-ellipsis3 0.6s infinite;
   }
+
   @keyframes loader-ellipsis1 {
     0% {
       transform: scale(0);
@@ -43,6 +45,7 @@
       transform: scale(1);
     }
   }
+
   @keyframes loader-ellipsis3 {
     0% {
       transform: scale(1);
@@ -51,6 +54,7 @@
       transform: scale(0);
     }
   }
+
   @keyframes loader-ellipsis2 {
     0% {
       transform: translate(0, 0);

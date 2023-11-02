@@ -314,6 +314,7 @@ template {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
 /*****************/
 /*** MAIN TYPO ***/
 /*****************/
@@ -375,6 +376,10 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
+/* Flex + direction */
+/* For all gradient, specialy CTA */
+/* Shade of cards */
 /*****************/
 /** MAIN BUTTON **/
 /*****************/
@@ -444,6 +449,9 @@ h4, p, ul, ol {
   visibility: hidden;
 }
 
+/* Flex + direction */
+/* For all gradient, specialy CTA */
+/* Shade of cards */
 /*****************/
 /*** STEP CARD ***/
 /*****************/
@@ -453,8 +461,8 @@ h4, p, ul, ol {
   flex-wrap: nowrap;
   justify-content: start;
   align-items: center;
-  background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
   border-radius: 20px;
   height: 73px;
   width: 100%;
@@ -590,9 +598,6 @@ h4, p, ul, ol {
 .menu__card--10 {
   animation-delay: 2800ms;
 }
-.menu__card--10 {
-  animation-delay: 2500ms;
-}
 .menu__card .menu__card__item {
   display: flex;
   flex-direction: column;
@@ -642,6 +647,7 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
 /****************************/
 /* LOADER STYLE & ANIMATION */
 /****************************/
@@ -728,6 +734,7 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
 .footer {
   background-color: #353535;
   padding: 22px 25px;
@@ -784,6 +791,11 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
+/** Color **/
+/** List gradient **/
+/** Font familly **/
+/** Media queries **/
 /*****************/
 /*** MAIN TYPO ***/
 /*****************/
@@ -959,6 +971,7 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
 /*****************/
 /*** MAIN TYPO ***/
 /*****************/
@@ -1020,6 +1033,7 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
 /*** Consignes medias queries ***/
 .img__hero {
   z-index: 2;
@@ -1084,6 +1098,10 @@ h4, p, ul, ol {
 /** Color **/
 /** List gradient **/
 /** Font familly **/
+/** Media queries **/
+/* Flex + direction */
+/* For all gradient, specialy CTA */
+/* Shade of cards */
 /*****************/
 /***** GLOBAL ****/
 /*****************/
@@ -1092,24 +1110,26 @@ body {
   width: auto;
   overflow-x: hidden;
 }
-
-.main-container {
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+body .main-container {
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.section {
+body .main-container .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.section--lightgrey {
+body .main-container .section--lightgrey {
   background-color: #F6F6F6;
 }
-.section .sub-section {
+body .main-container .section .sub-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1117,16 +1137,11 @@ body {
   box-sizing: border-box;
 }
 @media screen and (min-width: 900px) {
-  .section .sub-section {
+  body .main-container .section .sub-section {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

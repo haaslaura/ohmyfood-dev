@@ -9,22 +9,20 @@
 // ex: index.html
 
 .explain__step {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   flex-wrap: nowrap;
   justify-content: start;
   align-items: center;
 
-  background-color: #F6F6F6;
   @include shadow-block;
+  background-color: #F6F6F6;  
   border-radius: 20px;
   height: 73px;
   width: 100%;
   margin-top: 20px;
   
   .step {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: center;
     align-items: center;
 
@@ -74,8 +72,7 @@
   }
 
   .restaurant__text {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     flex-wrap: nowrap;
     justify-content:space-between;
     align-items: center;
@@ -147,8 +144,7 @@
     }
 
   .menu__card__item {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     flex-wrap: nowrap;
   }
 
