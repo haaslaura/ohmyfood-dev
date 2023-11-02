@@ -590,6 +590,9 @@ h4, p, ul, ol {
 .menu__card--10 {
   animation-delay: 2800ms;
 }
+.menu__card--10 {
+  animation-delay: 2500ms;
+}
 .menu__card .menu__card__item {
   display: flex;
   flex-direction: column;
